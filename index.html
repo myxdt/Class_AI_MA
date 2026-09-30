@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 소개합니다 | Profile</title>
+    <style>
+        /* 기본 스타일 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* 상단 소개 영역 (Navy Background) */
+        header {
+            background-color: #0a1931; /* 깊은 남색 */
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .profile-emoji {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        header p.affiliation {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        /* 본문 영역 (Light Background) */
+        main {
+            max-width: 800px;
+            margin: -40px auto 60px; /* 헤더와 겹치도록 배치 */
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #0a1931;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+
+        h2::before {
+            content: '✨';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .label {
+            font-weight: bold;
+            width: 100px;
+            color: #555;
+        }
+
+        .value {
+            color: #000;
+        }
+
+        .interest-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e7f0ff;
+            color: #0a1931;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .likes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .like-item {
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .like-emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .goal-box {
+            background: #0a1931;
+            color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        /* 반응형 스타일 (스마트폰 대응) */
+        @media (max-width: 600px) {
+            header {
+                padding: 60px 20px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                margin-top: -30px;
+            }
+            .card {
+                padding: 25px;
+            }
+            .label {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-emoji">👤</div>
+        <h1>[이름 또는 닉네임]</h1>
+        <p class="affiliation">경영학과 2학년</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <!-- 관심 분야 -->
+            <div class="section">
+                <h2>관심 분야</h2>
+                <div class="interest-tags">
+                    <span class="tag">#유통</span>
+                    <span class="tag">#마케팅</span>
+                    <span class="tag">#창업</span>
+                </div>
+            </div>
+
+            <!-- 좋아하는 것 -->
+            <div class="section">
+                <h2>좋아하는 것</h2>
+                <div class="likes-grid">
+                    <div class="like-item">
+                        <span class="like-emoji">☕</span>
+                        <span>커피</span>
+                    </div>
+                    <div class="like-item">
+                        <span class="like-emoji">🎧</span>
+                        <span>음악</span>
+                    </div>
+                    <div class="like-item">
+                        <span class="like-emoji">✈️</span>
+                        <span>여행</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 목표 -->
+            <div class="section">
+                <h2>나의 목표</h2>
+                <div class="goal-box">
+                    "세상의 흐름을 읽고 새로운 가치를 만드는 경영인"
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
